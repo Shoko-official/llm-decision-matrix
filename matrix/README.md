@@ -9,15 +9,15 @@ recommendations, diagrams, or paper-ready decision content.
 
 Initial planning areas:
 
-| Area | Purpose | Status |
-|---|---|---|
-| Use Case Fit | Reserve space for matching system choices to use cases. | Not drafted |
-| Evidence Readiness | Reserve space for evaluating evidence maturity. | Not drafted |
-| Operational Cost | Reserve space for cost-related considerations. | Not drafted |
-| Latency and Throughput | Reserve space for runtime performance considerations. | Not drafted |
-| Reliability | Reserve space for availability, correctness, and failure-mode considerations. | Not drafted |
-| Security and Governance | Reserve space for policy, risk, and control considerations. | Not drafted |
-| Implementation Complexity | Reserve space for build, integration, and maintenance considerations. | Not drafted |
+| Area | File | Purpose | Status |
+|---|---|---|---|
+| Use Case Fit | [use-case-fit.md](use-case-fit.md) | Reserve space for matching system choices to use cases. | Stub created |
+| Evidence Readiness | [evidence-readiness.md](evidence-readiness.md) | Reserve space for evaluating evidence maturity. | Stub created |
+| Operational Cost | [operational-cost.md](operational-cost.md) | Reserve space for cost-related considerations. | Stub created |
+| Latency and Throughput | [latency-throughput.md](latency-throughput.md) | Reserve space for runtime performance considerations. | Stub created |
+| Reliability | [reliability.md](reliability.md) | Reserve space for availability, correctness, and failure-mode considerations. | Stub created |
+| Security and Governance | [security-governance.md](security-governance.md) | Reserve space for policy, risk, and control considerations. | Stub created |
+| Implementation Complexity | [implementation-complexity.md](implementation-complexity.md) | Reserve space for build, integration, and maintenance considerations. | Stub created |
 
 This table is a planning scaffold. Future entries must stay neutral until
 supported by approved research ledger and taxonomy evidence.
