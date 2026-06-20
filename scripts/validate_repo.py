@@ -18,8 +18,16 @@ REQUIRED_FILES = [
     ".github/PULL_REQUEST_TEMPLATE.md",
     ".github/workflows/ci.yml",
     "docs/README.md",
+    "docs/evidence-handoff.md",
     "figures/README.md",
     "matrix/README.md",
+    "matrix/evidence-readiness.md",
+    "matrix/implementation-complexity.md",
+    "matrix/latency-throughput.md",
+    "matrix/operational-cost.md",
+    "matrix/reliability.md",
+    "matrix/security-governance.md",
+    "matrix/use-case-fit.md",
     "scripts/validate_repo.py",
     "tests/README.md",
 ]
@@ -43,6 +51,31 @@ SECRET_PATTERNS = [
         r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----",
         r"(?i)\b(password|secret|token)\s*[:=]\s*['\"]?[A-Za-z0-9_\-]{12,}",
     ]
+]
+
+
+FOUNDATION_MARKERS = {
+    "matrix/README.md": [
+        "# Matrix",
+        "## Matrix Skeleton",
+        "## Current Limits",
+    ],
+    "docs/evidence-handoff.md": [
+        "# Evidence Handoff",
+        "## Handoff Requirements",
+        "## Readiness States",
+        "## Current Limits",
+    ],
+}
+
+CRITERIA_STUB_FILES = [
+    "matrix/evidence-readiness.md",
+    "matrix/implementation-complexity.md",
+    "matrix/latency-throughput.md",
+    "matrix/operational-cost.md",
+    "matrix/reliability.md",
+    "matrix/security-governance.md",
+    "matrix/use-case-fit.md",
 ]
 
 
@@ -79,6 +112,33 @@ def validate_required_paths() -> None:
         fail("; ".join(details))
 
 
+def validate_foundation_markers() -> None:
+    for relative_path, markers in FOUNDATION_MARKERS.items():
+        text = read_text(ROOT / relative_path)
+        missing_markers = [marker for marker in markers if marker not in text]
+        if missing_markers:
+            fail(
+                f"{relative_path} is missing expected marker(s): "
+                + ", ".join(missing_markers)
+            )
+
+
+def validate_criteria_stubs() -> None:
+    required_markers = [
+        "Draft status: Not drafted.",
+        "Purpose:",
+        "Evidence requirement:",
+    ]
+    for relative_path in CRITERIA_STUB_FILES:
+        text = read_text(ROOT / relative_path)
+        missing_markers = [marker for marker in required_markers if marker not in text]
+        if missing_markers:
+            fail(
+                f"{relative_path} is missing expected marker(s): "
+                + ", ".join(missing_markers)
+            )
+
+
 def lint_text() -> None:
     for path in iter_text_files():
         text = read_text(path)
@@ -90,6 +150,8 @@ def lint_text() -> None:
 
 def run_validate() -> None:
     validate_required_paths()
+    validate_foundation_markers()
+    validate_criteria_stubs()
 
 
 def run_lint() -> None:
