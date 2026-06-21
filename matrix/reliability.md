@@ -14,7 +14,7 @@ No criteria have been finalized yet. Each criterion must document:
 - Criterion ID: rel-availability
 - Description: Tracks fault tolerance, memory layer availability, and data correctness guarantees.
 - Related Ledger Claim ID: claim-rel-availability-placeholder
-- Related Ledger Source ID: src-rel-availability-placeholder
+- Related Ledger Source ID: source-rel-availability-placeholder
 - Related Taxonomy Layer: memory-layer
 - Evidence Type: secondary
 - Readiness State: evidence_needed

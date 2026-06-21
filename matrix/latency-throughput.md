@@ -13,7 +13,7 @@ No criteria have been finalized yet. Each criterion must document:
 - Criterion ID: perf-latency
 - Description: Measures the end-to-end response time of serving and inference layers.
 - Related Ledger Claim ID: claim-perf-latency-placeholder
-- Related Ledger Source ID: src-perf-latency-placeholder
+- Related Ledger Source ID: source-perf-latency-placeholder
 - Related Taxonomy Layer: inference-layer
 - Evidence Type: secondary
 - Readiness State: evidence_needed
@@ -22,7 +22,7 @@ No criteria have been finalized yet. Each criterion must document:
 - Criterion ID: perf-throughput
 - Description: Measures the requests and tokens processed per second in the serving layer.
 - Related Ledger Claim ID: claim-perf-throughput-placeholder
-- Related Ledger Source ID: src-perf-throughput-placeholder
+- Related Ledger Source ID: source-perf-throughput-placeholder
 - Related Taxonomy Layer: inference-layer
 - Evidence Type: secondary
 - Readiness State: evidence_needed
