@@ -139,6 +139,115 @@ def validate_criteria_stubs() -> None:
             )
 
 
+def validate_matrix_evidence() -> None:
+    allowed_states = {"planning", "evidence_needed", "candidate", "ready", "blocked"}
+    
+    # 1. Parse valid taxonomy terms from llm-architecture-taxonomy
+    tax_glossary_path = ROOT.parent / "llm-architecture-taxonomy" / "taxonomy" / "glossary.md"
+    valid_tax_terms = set()
+    if tax_glossary_path.is_file():
+        tax_text = tax_glossary_path.read_text(encoding="utf-8")
+        for line in tax_text.splitlines():
+            if line.startswith("|") and not line.startswith("|---"):
+                parts = [p.strip() for p in line.split("|")[1:-1]]
+                if len(parts) >= 2 and parts[0] != "Term":
+                    valid_tax_terms.add(parts[0])
+                    
+    # 2. Check if ledger has actual claims/sources beyond README
+    ledger_claims_dir = ROOT.parent / "llm-systems-research-ledger" / "claims"
+    ledger_sources_dir = ROOT.parent / "llm-systems-research-ledger" / "sources"
+    
+    has_ledger_claims = False
+    if ledger_claims_dir.is_dir():
+        claim_files = [p for p in ledger_claims_dir.glob("*.md") if p.name.lower() != "readme.md"]
+        if claim_files:
+            has_ledger_claims = True
+            
+    has_ledger_sources = False
+    if ledger_sources_dir.is_dir():
+        source_files = [p for p in ledger_sources_dir.glob("*.md") if p.name.lower() != "readme.md"]
+        if source_files:
+            has_ledger_sources = True
+
+    # 3. Scan all markdown files in the repository for evidence tables
+    for path in iter_text_files():
+        if path.suffix.lower() != ".md":
+            continue
+            
+        text = read_text(path)
+        lines = text.splitlines()
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            if line.startswith("|") and i + 1 < len(lines) and lines[i+1].startswith("|---"):
+                headers = [h.strip().lower() for h in line.split("|")[1:-1]]
+                
+                state_idx = -1
+                claim_idx = -1
+                source_idx = -1
+                term_idx = -1
+                
+                for idx, h in enumerate(headers):
+                    if "state" in h or "status" in h:
+                        state_idx = idx
+                    elif "claim" in h:
+                        claim_idx = idx
+                    elif "source" in h:
+                        source_idx = idx
+                    elif "term" in h or "taxonomy" in h:
+                        term_idx = idx
+                        
+                if claim_idx != -1 and source_idx != -1:
+                    j = i + 2
+                    while j < len(lines) and lines[j].startswith("|"):
+                        row_line = lines[j]
+                        row_parts = [p.strip() for p in row_line.split("|")[1:-1]]
+                        
+                        if len(row_parts) > max(claim_idx, source_idx, state_idx, term_idx):
+                            claim = row_parts[claim_idx]
+                            source = row_parts[source_idx]
+                            state = row_parts[state_idx].replace("`", "") if state_idx != -1 else ""
+                            term = row_parts[term_idx] if term_idx != -1 else ""
+                            
+                            # Validate state
+                            if state and state not in allowed_states:
+                                fail(f"Invalid state '{state}' in {path.relative_to(ROOT)}")
+                                
+                            # Validate Claim ID
+                            if claim != "N/A":
+                                if not re.match(r"^claim-[A-Za-z0-9_\-]+$", claim):
+                                    fail(f"Invalid Claim ID format '{claim}' in {path.relative_to(ROOT)}")
+                                if has_ledger_claims:
+                                    claim_file = ledger_claims_dir / f"{claim}.md"
+                                    if not claim_file.is_file():
+                                        fail(f"Referenced claim file {claim}.md does not exist in ledger repository")
+                                        
+                            # Validate Source ID
+                            if source != "N/A":
+                                if not re.match(r"^source-[A-Za-z0-9_\-]+$", source):
+                                    fail(f"Invalid Source ID format '{source}' in {path.relative_to(ROOT)}")
+                                if has_ledger_sources:
+                                    source_file = ledger_sources_dir / f"{source}.md"
+                                    if not source_file.is_file():
+                                        fail(f"Referenced source file {source}.md does not exist in ledger repository")
+                                        
+                            # Validate Taxonomy Term
+                            if term and term != "N/A" and valid_tax_terms:
+                                clean_term = term
+                                link_match = re.match(r"^\[([^\]]+)\]", term)
+                                if link_match:
+                                    clean_term = link_match.group(1)
+                                if clean_term not in valid_tax_terms:
+                                    fail(f"Referenced taxonomy term '{clean_term}' in {path.relative_to(ROOT)} does not exist in taxonomy glossary")
+                                    
+                        j += 1
+                    i = j
+                else:
+                    i += 1
+            else:
+                i += 1
+
+
 def lint_text() -> None:
     for path in iter_text_files():
         text = read_text(path)
@@ -152,6 +261,7 @@ def run_validate() -> None:
     validate_required_paths()
     validate_foundation_markers()
     validate_criteria_stubs()
+    validate_matrix_evidence()
 
 
 def run_lint() -> None:
