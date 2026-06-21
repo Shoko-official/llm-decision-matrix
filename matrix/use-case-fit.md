@@ -11,11 +11,13 @@ research ledger and taxonomy evidence before use.
 
 No criteria have been finalized yet. Each criterion must document:
 - Criterion ID: uc-fit-alignment
+- Description: Evaluates the alignment of the system layer configuration to target task profiles.
 - Related Ledger Claim ID: claim-uc-fit-placeholder
 - Related Ledger Source ID: src-uc-fit-placeholder
 - Related Taxonomy Layer: model-layer
 - Evidence Type: secondary
 - Readiness State: evidence_needed
 - Unresolved Evidence Gap: Needs validated use cases from model layer
+
 
 
