@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "docs/README.md",
     "docs/evidence-handoff.md",
     "docs/scoring-scale.md",
+    "docs/scoring-rationale.md",
     "figures/README.md",
     "matrix/README.md",
     "matrix/evidence-readiness.md",
