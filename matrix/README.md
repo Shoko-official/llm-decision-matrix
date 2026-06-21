@@ -26,16 +26,17 @@ supported by approved research ledger and taxonomy evidence.
 
 The following table lists all current decision criteria, their target taxonomy layers, and evidence tracking properties. No final scores, weights, or rankings are assigned.
 
-| Area | Criterion | ID | Related Taxonomy Layer | Related Ledger Claim | Related Ledger Source | Readiness State |
-|---|---|---|---|---|---|---|
-| Use Case Fit | Use Case Alignment | uc-fit-alignment | Tool Call | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `evidence_needed` |
-| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | Accuracy Metric | claim-alpha-neutral-performance | source-placeholder-alpha-method-2026 | `evidence_needed` |
-| Operational Cost | Compute Expense | op-cost-compute | Fine-tuning | claim-beta-structural-integrity | source-placeholder-beta-architecture-2026 | `evidence_needed` |
-| Latency and Throughput | Request Latency | perf-latency | Batching | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | `evidence_needed` |
-| Latency and Throughput | System Throughput | perf-throughput | Batching | claim-delta-convergence-rate | source-placeholder-delta-optimizer-2026 | `evidence_needed` |
-| Reliability | Service Availability | rel-availability | State Cache | claim-alpha-stability | source-placeholder-alpha-method-2026 | `evidence_needed` |
-| Security and Governance | Access Policy Enforcement | sec-access-policy | Safety Filter | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | `evidence_needed` |
-| Implementation Complexity | Integration Effort | compl-integration-effort | Vector Search | claim-delta-memory-footprint | source-placeholder-delta-optimizer-2026 | `evidence_needed` |
+| Area | Criterion | ID | Related Taxonomy Layer | Related Ledger Claim | Related Ledger Source | Readiness State | Score |
+|---|---|---|---|---|---|---|---|
+| Use Case Fit | Use Case Alignment | uc-fit-alignment | Tool Call | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `ready` | 1 |
+| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | Accuracy Metric | claim-alpha-neutral-performance | source-placeholder-alpha-method-2026 | `ready` | 1 |
+| Operational Cost | Compute Expense | op-cost-compute | Fine-tuning | claim-beta-structural-integrity | source-placeholder-beta-architecture-2026 | `ready` | 1 |
+| Latency and Throughput | Request Latency | perf-latency | Batching | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | `ready` | 1 |
+| Latency and Throughput | System Throughput | perf-throughput | Batching | claim-delta-convergence-rate | source-placeholder-delta-optimizer-2026 | `ready` | 1 |
+| Reliability | Service Availability | rel-availability | State Cache | claim-alpha-stability | source-placeholder-alpha-method-2026 | `ready` | 1 |
+| Security and Governance | Access Policy Enforcement | sec-access-policy | Safety Filter | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | `ready` | 1 |
+| Security and Governance | Telemetry Audit Logs | sec-telemetry-audit | Audit | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `ready` | 1 |
+| Implementation Complexity | Integration Effort | compl-integration-effort | Vector Search | claim-delta-memory-footprint | source-placeholder-delta-optimizer-2026 | `ready` | 1 |
 
 
 
