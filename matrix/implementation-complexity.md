@@ -10,11 +10,12 @@ approved research ledger and taxonomy evidence before use.
 ## Criteria Details
 
 No criteria have been finalized yet. Each criterion must document:
-- Criterion ID: TBD
-- Related Ledger Claim ID: TBD
-- Related Ledger Source ID: TBD
-- Related Taxonomy Layer: TBD
-- Evidence Type: TBD
-- Readiness State: TBD
-- Unresolved Evidence Gap: TBD
+- Criterion ID: compl-integration-effort
+- Related Ledger Claim ID: claim-compl-integration-placeholder
+- Related Ledger Source ID: src-compl-integration-placeholder
+- Related Taxonomy Layer: agent-layer
+- Evidence Type: secondary
+- Readiness State: evidence_needed
+- Unresolved Evidence Gap: Needs agent-layer interface definition
+
 
