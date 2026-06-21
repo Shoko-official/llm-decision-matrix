@@ -19,6 +19,7 @@ REQUIRED_FILES = [
     ".github/workflows/ci.yml",
     "docs/README.md",
     "docs/evidence-handoff.md",
+    "docs/scoring-scale.md",
     "figures/README.md",
     "matrix/README.md",
     "matrix/evidence-readiness.md",
