@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| speculative inference latency | speculative decoding | `evidence_needed` | claim-speculative-latency | source-speculative-paper | Needs ledger claim and source records |
+| speculative inference latency | Batching | `evidence_needed` | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | Needs ledger claim and source records |
