@@ -32,6 +32,7 @@ REQUIRED_FILES = [
     "matrix/use-case-fit.md",
     "scripts/validate_repo.py",
     "tests/README.md",
+    "tests/test_scoring.py",
 ]
 
 REQUIRED_DIRECTORIES = [
@@ -288,6 +289,12 @@ def run_lint() -> None:
 def run_test() -> None:
     run_validate()
     run_lint()
+    import unittest
+    suite = unittest.defaultTestLoader.discover(start_dir=str(ROOT / "tests"), pattern="test_*.py")
+    runner = unittest.TextTestRunner(verbosity=2)
+    result = runner.run(suite)
+    if not result.wasSuccessful():
+        fail("Unit tests failed")
 
 
 def main(argv: list[str]) -> int:
