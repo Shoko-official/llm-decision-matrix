@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| safety moderation latency | input-output guardrails | `evidence_needed` | claim-guardrails-safety | source-guardrails-paper | Needs ledger claim and source records |
+| safety moderation latency | Safety Filter | `evidence_needed` | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | Needs ledger claim and source records |

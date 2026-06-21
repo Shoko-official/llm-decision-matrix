@@ -28,14 +28,14 @@ The following table lists all current decision criteria, their target taxonomy l
 
 | Area | Criterion | ID | Related Taxonomy Layer | Related Ledger Claim | Related Ledger Source | Readiness State |
 |---|---|---|---|---|---|---|
-| Use Case Fit | Use Case Alignment | uc-fit-alignment | model-layer | claim-uc-fit-placeholder | source-uc-fit-placeholder | evidence_needed |
-| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | evaluation-layer | claim-ev-readiness-placeholder | source-ev-readiness-placeholder | evidence_needed |
-| Operational Cost | Compute Expense | op-cost-compute | training-layer | claim-op-cost-placeholder | source-op-cost-placeholder | evidence_needed |
-| Latency and Throughput | Request Latency | perf-latency | inference-layer | claim-perf-latency-placeholder | source-perf-latency-placeholder | evidence_needed |
-| Latency and Throughput | System Throughput | perf-throughput | inference-layer | claim-perf-throughput-placeholder | source-perf-throughput-placeholder | evidence_needed |
-| Reliability | Service Availability | rel-availability | memory-layer | claim-rel-availability-placeholder | source-rel-availability-placeholder | evidence_needed |
-| Security and Governance | Access Policy Enforcement | sec-access-policy | governance-layer | claim-sec-policy-placeholder | source-sec-policy-placeholder | evidence_needed |
-| Implementation Complexity | Integration Effort | compl-integration-effort | agent-layer | claim-compl-integration-placeholder | source-compl-integration-placeholder | evidence_needed |
+| Use Case Fit | Use Case Alignment | uc-fit-alignment | Tool Call | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `evidence_needed` |
+| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | Accuracy Metric | claim-alpha-neutral-performance | source-placeholder-alpha-method-2026 | `evidence_needed` |
+| Operational Cost | Compute Expense | op-cost-compute | Fine-tuning | claim-beta-structural-integrity | source-placeholder-beta-architecture-2026 | `evidence_needed` |
+| Latency and Throughput | Request Latency | perf-latency | Batching | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | `evidence_needed` |
+| Latency and Throughput | System Throughput | perf-throughput | Batching | claim-delta-convergence-rate | source-placeholder-delta-optimizer-2026 | `evidence_needed` |
+| Reliability | Service Availability | rel-availability | State Cache | claim-alpha-stability | source-placeholder-alpha-method-2026 | `evidence_needed` |
+| Security and Governance | Access Policy Enforcement | sec-access-policy | Safety Filter | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | `evidence_needed` |
+| Implementation Complexity | Integration Effort | compl-integration-effort | Vector Search | claim-delta-memory-footprint | source-placeholder-delta-optimizer-2026 | `evidence_needed` |
 
 
 

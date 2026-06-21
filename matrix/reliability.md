@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| retrieval augmentation correctness | retrieval-augmented generation (RAG) | `evidence_needed` | claim-rag-hallucination | source-rag-paper | Needs ledger claim and source records |
+| retrieval augmentation correctness | State Cache | `evidence_needed` | claim-alpha-stability | source-placeholder-alpha-method-2026 | Needs ledger claim and source records |

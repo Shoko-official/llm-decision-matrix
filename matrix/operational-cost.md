@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| fine-tuning computational cost | parameter-efficient fine-tuning (PEFT) | `evidence_needed` | claim-peft-cost | source-peft-paper | Needs ledger claim and source records |
+| fine-tuning computational cost | Fine-tuning | `evidence_needed` | claim-beta-structural-integrity | source-placeholder-beta-architecture-2026 | Needs ledger claim and source records |
