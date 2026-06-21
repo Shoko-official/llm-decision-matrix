@@ -187,6 +187,7 @@ def validate_matrix_evidence() -> None:
                 claim_idx = -1
                 source_idx = -1
                 term_idx = -1
+                score_idx = -1
                 
                 for idx, h in enumerate(headers):
                     if "state" in h or "status" in h:
@@ -197,6 +198,8 @@ def validate_matrix_evidence() -> None:
                         source_idx = idx
                     elif "term" in h or "taxonomy" in h:
                         term_idx = idx
+                    elif "score" in h:
+                        score_idx = idx
                         
                 if claim_idx != -1 and source_idx != -1:
                     j = i + 2
@@ -204,7 +207,7 @@ def validate_matrix_evidence() -> None:
                         row_line = lines[j]
                         row_parts = [p.strip() for p in row_line.split("|")[1:-1]]
                         
-                        if len(row_parts) > max(claim_idx, source_idx, state_idx, term_idx):
+                        if len(row_parts) > max(claim_idx, source_idx, state_idx, term_idx, score_idx):
                             claim = row_parts[claim_idx]
                             source = row_parts[source_idx]
                             state = row_parts[state_idx].replace("`", "") if state_idx != -1 else ""
@@ -240,6 +243,18 @@ def validate_matrix_evidence() -> None:
                                     clean_term = link_match.group(1)
                                 if clean_term not in valid_tax_terms:
                                     fail(f"Referenced taxonomy term '{clean_term}' in {path.relative_to(ROOT)} does not exist in taxonomy glossary")
+                                    
+                            # Validate Score
+                            if score_idx != -1:
+                                score_val = row_parts[score_idx].replace("`", "").strip()
+                                if score_val and score_val != "N/A":
+                                    if score_val not in {"0", "1", "2", "3"}:
+                                        fail(f"Score '{score_val}' in {path.relative_to(ROOT)} is out of range. Must be 0, 1, 2, or 3.")
+                                    if score_val in {"1", "2", "3"}:
+                                        if claim == "N/A" or not claim:
+                                            fail(f"Score '{score_val}' in {path.relative_to(ROOT)} must be backed by a valid Claim ID (cannot be N/A).")
+                                        if source == "N/A" or not source:
+                                            fail(f"Score '{score_val}' in {path.relative_to(ROOT)} must be backed by a valid Source ID (cannot be N/A).")
                                     
                         j += 1
                     i = j
