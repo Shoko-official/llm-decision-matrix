@@ -11,11 +11,13 @@ approved research ledger and taxonomy evidence before use.
 
 No criteria have been finalized yet. Each criterion must document:
 - Criterion ID: compl-integration-effort
+- Description: Tracks development effort, software integration complexity, and agent interface setup.
 - Related Ledger Claim ID: claim-compl-integration-placeholder
 - Related Ledger Source ID: src-compl-integration-placeholder
 - Related Taxonomy Layer: agent-layer
 - Evidence Type: secondary
 - Readiness State: evidence_needed
 - Unresolved Evidence Gap: Needs agent-layer interface definition
+
 
 
