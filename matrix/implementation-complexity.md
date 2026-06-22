@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| memory cache storage | Vector Search | `evidence_needed` | claim-delta-memory-footprint | source-placeholder-delta-optimizer-2026 | Needs ledger claim and source records |
+| Integration Effort | Vector Search | `ready` | claim-kv-cache-paged-attention | source-kv-cache-2023 | None |

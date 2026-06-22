@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| benchmark verification | Accuracy Metric | `evidence_needed` | claim-alpha-neutral-performance | source-placeholder-alpha-method-2026 | Needs ledger claim and source records |
+| Data Quality Maturity | Accuracy Metric | `ready` | claim-attention-transformer | source-attention-2017 | None |

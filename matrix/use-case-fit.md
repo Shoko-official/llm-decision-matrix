@@ -11,4 +11,4 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| agent task execution | Tool Call | `evidence_needed` | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | Needs ledger claim and source records |
+| Use Case Alignment | Tool Call | `ready` | claim-attention-transformer | source-attention-2017 | None |

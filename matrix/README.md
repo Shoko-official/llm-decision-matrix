@@ -28,15 +28,16 @@ The following table lists all current decision criteria, their target taxonomy l
 
 | Area | Criterion | ID | Related Taxonomy Layer | Related Ledger Claim | Related Ledger Source | Readiness State | Score |
 |---|---|---|---|---|---|---|---|
-| Use Case Fit | Use Case Alignment | uc-fit-alignment | Tool Call | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `ready` | 1 |
-| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | Accuracy Metric | claim-alpha-neutral-performance | source-placeholder-alpha-method-2026 | `ready` | 1 |
-| Operational Cost | Compute Expense | op-cost-compute | Fine-tuning | claim-beta-structural-integrity | source-placeholder-beta-architecture-2026 | `ready` | 1 |
-| Latency and Throughput | Request Latency | perf-latency | Batching | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | `ready` | 1 |
-| Latency and Throughput | System Throughput | perf-throughput | Batching | claim-delta-convergence-rate | source-placeholder-delta-optimizer-2026 | `ready` | 1 |
-| Reliability | Service Availability | rel-availability | State Cache | claim-alpha-stability | source-placeholder-alpha-method-2026 | `ready` | 1 |
-| Security and Governance | Access Policy Enforcement | sec-access-policy | Safety Filter | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | `ready` | 1 |
-| Security and Governance | Telemetry Audit Logs | sec-telemetry-audit | Audit | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | `ready` | 1 |
-| Implementation Complexity | Integration Effort | compl-integration-effort | Vector Search | claim-delta-memory-footprint | source-placeholder-delta-optimizer-2026 | `ready` | 1 |
+| Use Case Fit | Use Case Alignment | uc-fit-alignment | Tool Call | claim-attention-transformer | source-attention-2017 | `ready` | 3 |
+| Evidence Readiness | Data Quality Maturity | ev-readiness-maturity | Accuracy Metric | claim-attention-transformer | source-attention-2017 | `ready` | 3 |
+| Operational Cost | Compute Expense | op-cost-compute | Fine-tuning | claim-attention-transformer | source-attention-2017 | `ready` | 2 |
+| Latency and Throughput | Request Latency | perf-latency | Batching | claim-kv-cache-paged-attention | source-kv-cache-2023 | `ready` | 2 |
+| Latency and Throughput | System Throughput | perf-throughput | Batching | claim-kv-cache-paged-attention | source-kv-cache-2023 | `ready` | 3 |
+| Latency and Throughput | Telemetry Context Overhead | perf-telemetry-overhead | Telemetry | claim-tracing-context-propagation-overhead | source-opentelemetry-2023 | `ready` | 2 |
+| Reliability | Service Availability | rel-availability | State Cache | claim-kv-cache-paged-attention | source-kv-cache-2023 | `ready` | 2 |
+| Security and Governance | Access Policy Enforcement | sec-access-policy | Safety Filter | claim-adversarial-prompt-injection | source-adversarial-2024 | `ready` | 2 |
+| Security and Governance | Telemetry Audit Logs | sec-telemetry-audit | Audit | claim-dapper-distributed-tracing | source-dapper-2010 | `ready` | 3 |
+| Implementation Complexity | Integration Effort | compl-integration-effort | Vector Search | claim-kv-cache-paged-attention | source-kv-cache-2023 | `ready` | 2 |
 
 
 
