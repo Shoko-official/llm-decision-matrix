@@ -11,5 +11,5 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Score | Evidence Gap |
 |---|---|---|---|---|---|---|
-| safety moderation latency | Safety Filter | `ready` | claim-epsilon-allocation-efficiency | source-placeholder-epsilon-scheduler-2026 | 1 | Needs ledger claim and source records |
-| telemetry audit logs | Audit | `ready` | claim-gamma-integration-flexibility | source-placeholder-gamma-framework-2026 | 1 | Needs ledger claim and source records |
+| Access Policy Enforcement | Safety Filter | `ready` | claim-adversarial-prompt-injection | source-adversarial-2024 | 2 | None |
+| Telemetry Audit Logs | Audit | `ready` | claim-dapper-distributed-tracing | source-dapper-2010 | 3 | None |

@@ -11,4 +11,6 @@ research ledger and taxonomy evidence before use.
 
 | Criterion Item | Taxonomy Term | Readiness State | Claim ID | Source ID | Evidence Gap |
 |---|---|---|---|---|---|
-| speculative inference latency | Batching | `evidence_needed` | claim-epsilon-preemption-delay | source-placeholder-epsilon-scheduler-2026 | Needs ledger claim and source records |
+| Request Latency | Batching | `ready` | claim-kv-cache-paged-attention | source-kv-cache-2023 | None |
+| System Throughput | Batching | `ready` | claim-kv-cache-paged-attention | source-kv-cache-2023 | None |
+| Telemetry Context Overhead | Telemetry | `ready` | claim-tracing-context-propagation-overhead | source-opentelemetry-2023 | None |
